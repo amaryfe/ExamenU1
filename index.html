@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>EXAMEN ORDINARIO UNIDAD 1</h1>
+    <button id="on" onclick="encenderTelevision()">ENCENDER/APAGAR</button>
+    <button id="volMas" onclick="subirVolumen()">VOLUMEN +</button>
+    <button id="volMenos" onclick="bajarVolumen()">VOLUMEN -</button>
+    <button id="canalMas" onclick="subirCanal()">CANAL +</button>
+    <button id="canalMenos" onclick="bajarCanal()">CANAL -</button>
+    <button id="silenciar" onclick="silenciarTV()">SILENCIAR</button>
+
+    <script>
+      var television = {
+        encender: false,
+        canal: 7,
+        volumen: 3,
+        silenciar: false,
+      };
+
+      function encenderTelevision() {
+
+      }
+
+      function subirVolumen() {
+        if (television.volumen >= 100) {
+          console.log("VOLUMEN AL MÁXIMO");
+        } else {
+          television.volumen++;
+          console.log(television);
+        }
+      }
+
+      function bajarVolumen() {
+        if (television.volumen <= 1) {
+          console.log("VOLUMEN AL MÍNIMO");
+        } else {
+          television.volumen--;
+          console.log(television);
+        }
+      }
+
+      function subirCanal() {
+        if (television.canal >= 100) {
+          console.log("CANAL MÁXIMO");
+        } else {
+          television.canal++;
+          console.log(television);
+        }
+      }
+
+      function bajarCanal() {
+        if (television.canal <= 1) {
+          console.log("CANAL MÍNIMO");
+        } else {
+          television.canal--;
+          console.log(television);
+        }
+      }
+
+      function silenciarTV(){
+        television.volumen=0
+
+      }
+
+
+    </script>
+  </body>
+</html>
